@@ -5,7 +5,7 @@
 // var b="string";
 // c= 67;    // if not use "use strict" then js auto create a new variable named c
 // console.log(c);
-//"use strict"      // no error will occur
+//"use strict"      // no error will occur  because it is ignored
 // d=40;
 // console.log(d);    // now error occur
 // console.log(b);
@@ -26,7 +26,7 @@
 // const pi=3.14;   // cannot change this
 // ----------------------- Datatypes ------------
 // 1). Number
-// 2). String
+// 2). String (include character)
 // 3). Boolean
 // 4). Undefined
 // 5). Null
@@ -100,7 +100,7 @@
 // do while
 // switch case 
 // ternary operator
-// ------------ all these are same as in C (100%)
+// ------------ all these are same as in C/c++ (100%)
 
 // ------------------------------------ Arrays ----------------
 // Array in JS is Dynamic unlike C hence need not to specify size
@@ -217,7 +217,7 @@
 // // let [var1,var2,...var3]=array;
 // // var1 and var2 get the corresponding value but var3 is an array contain all remainings
 // // console.log(var3);
-// let [var1,,var3]=array;   // var3 will get 3 after leaving 3
+// let [var1,,var3]=array;   // var3 will get 3 after leaving 2
 // console.log(var1,var3);  
 
 
@@ -274,7 +274,7 @@
 //     console.log(i);
 // }
 
-// -------------- Objects Destructuring
+// -------------- Objects Destructuring-----------------
 // const obj={
 //     u_name:"yogesh",
 //     age:23,
@@ -295,6 +295,22 @@
 // const obj1={...array1}    // explicit conversion of array into object
 // // index will be keys
 // console.log(obj1);
+// const array2=[11,12];
+// const obj2={...array1,...array2};    // array2 values will override the valus of same keys in array1 if present
+// console.log(obj2);  
+
+// const obj={"name":"hi","id":123,"age":89};
+// const obj1={"name":"obj1","id":4,"random":"ahdofad"};
+// const obj2={"id":5};
+// const obj3={"name":"obj3","id":6};
+// const test0={...obj,...obj1};     // object with union of attributes if value present in obj1 then it oveeride obj value
+// const test1={...obj1,...obj};
+// const test2={...obj2,...obj};    //  all attributes of obj 
+// const test3={...obj,...obj2};    // id updataed as obj2 also contain that
+// console.log(test0);
+// console.log(test1);
+// console.log(test2);
+// console.log(test3);
 
 // ------------- nested object destructuring ----------------
 // const array=[
@@ -306,7 +322,9 @@
 // // apply both concept 1 by 1
 // console.log(user1_name,user1_age);
 
-// --
+// --------------- methods of object
+//  1). Object.entries(obj)   --> return array of object with [[key,value],...]
+//  1). Object.fromEntries(iter)   -->iter is iterable(can be looped) of key-value pair  return object
 // --
 // ------------------------------function -------------------------
 
@@ -333,7 +351,7 @@
 
 // -------------------- Hoisting ------------------
 // using func before creating it
-// only valid for functio declaration
+// only valid for function declaration
 // fun();   //  no error
 // function fun(){
 //     console.log("I am Hacker");
@@ -528,12 +546,23 @@
 // }
 
 
-// ---------------- Map data-type
+// ---------------- Map data-type  ----------------------
 // like object
 // map can have keys of any datatype while in objects only number and string allowed
+// map preserver order of insertion of entities
 // const map1=new Map();
 // console.log(map1.key1);
-
+// Methods
+//   map1.set(key,value)  
+//   map1.get(key) 
+//   map1.has(key)  return bool
+//   map1.delete(key)  
+//   map1.clear()  clear all entries
+//   map1.size()  //  object doesn't have this
+//   map1.keys()   - return iterator of keys
+//   map1.values()   - return iterator of values
+//   map1.entries()  - return iterator with key,value pair
+//   map1.forEach(callback)  
 // --
 // ----------------- Optional Chaining  (?.)                      ----- (imp)
 // const user={
@@ -611,7 +640,7 @@
 //         console.log(`Username is ${this.u_name} and age is ${this.age}`);
 //     }
 // }
-// obj1.about();   // hence arraow function fail is case if this
+// obj1.about();   // hence arrow function fail is case if this
 
 // --------------
 // // --------------------- object using function

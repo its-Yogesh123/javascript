@@ -170,9 +170,8 @@
 // }
 // box1.addEventListener("click",fun);
 // // box2.addEventListener("click",fun);      // not need to bind
-// // box3.addEventListener("click",fun);                                           
-
-// ---------------------------Asyncronys programming
+// // box3.addEventListener("click",fun);            
+// // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Asynchronous Programming <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 // console.log("Starting Code Execution");
 // function run(){
 //     console.log("Function called/Runned");

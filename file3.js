@@ -1,4 +1,4 @@
-// -------------------- AJAX (Asynchromous Javascript with XML)
+// -------------------- AJAX (Asynchronous Javascript with XML)
 // const URL="https://jsonplaceholder.typicode.com/posts"
 // const xhr=new XMLHttpRequest();
 // console.log(xhr.readyState);   // initially at 0
@@ -59,7 +59,7 @@
 
 
 
-// ------- creating the above usign promise
+// ------- creating the above using promise
 const URL="https://jsonplaceholder.typicode.com/posts"
 function sendRequest(method,URL){
     
